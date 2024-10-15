@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://stuffzez.github.io/library/css/mainstylesheet.css"/>
+    <link rel="icon" type="image/x-icon" href="https://s6-c.github.io/assets/images/pfp.png">
+    <title>REQUEST PROCESSING PAGE | Minecraft Command Generator | s6-c.github.io</title>
+</head>
+<body>
+    <h1>PROCESSING</h1>
+    <br>
+    <p id="output">Generated Command: N/A</p>
+    <script>
+        function generateExecuteCommandFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const peram1 = urlParams.get('peram1');
+    const peram2 = urlParams.get('peram2');
+    
+    if (!peram1 || !peram2) {
+        window.location.replace('execute')
+        return "Missing parameters!";
+    }
+    
+    const template = "Generated Command: /execute [P1] [P2] run COMMAND";
+    return template
+        .replace("[P1]", peram1)
+        .replace("[P2]", peram2);
+}
+
+function displayCommand() {
+    const command = generateExecuteCommandFromURL();
+    document.getElementById('output').textContent = command;
+}
+
+// Call the displayCommand function to update the HTML
+displayCommand();
+
+    </script>
+</body>
+</html>

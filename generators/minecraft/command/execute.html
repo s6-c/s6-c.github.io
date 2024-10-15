@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://stuffzez.github.io/library/css/mainstylesheet.css"/>
+    <link rel="icon" type="image/x-icon" href="https://s6-c.github.io/assets/images/pfp.png">
+    <title>MC Command Generator | Execute | s6-c.github.io</title>
+</head>
+<body>
+    <h1>MC Command Generator - Execute</h1>
+    <br>
+    <form action="execute_process">
+        <label for="peram1">Argument 1: </label>
+        <select name="peram1" id="peram1">
+            <option value="as">as (Execute As An Entity - eg. /execute as @e[type=sheep] run say I Am Sheep - Makes All Sheep Say 'I Am Sheep')</option>
+            <option value="at">at (Execute At A Place Or Entity's Position - eg. /execute at @e[type=sheep] run setblock ~ ~-1 ~ bedrock - Sets Block Below All Sheep To Bedrock)</option>
+        </select>
+        <br>
+        <br>
+        <label for="peram2">Argument 2: </label>
+        <select name="peram2" id="peram2">
+            <option value="void" disabled>-------------------------------------------------------------------</option>
+            <option value="void" disabled>OPTIONS FOR: as</option>
+            <option value="void" disabled>-------------------------------------------------------------------</option>
+            <option value="@e">@e - As All Entitys</option>
+            <option value="@a">@a - As All Players</option>
+            <option value="@s">@s - As Self</option>
+            <option value="@r">@r - As Random Player</option>
+            <option value="[USERNAME]">Player's Username (eg. /execute as MyUsername run say Hi)</option>
+            <option value="@e[type=ENTITY_NAME]">@e[type=ENTITY_NAME] - As A Certain Entity</option>
+            <option value="void" disabled>-------------------------------------------------------------------</option>
+            <option value="void" disabled>OPTIONS FOR: at</option>
+            <option value="void" disabled>-------------------------------------------------------------------</option>
+            <option value="@e">@e - As All Entitys</option>
+            <option value="@a">@a - As All Players</option>
+            <option value="@s">@s - As Self</option>
+            <option value="@r">@r - As Random Player</option>
+            <option value="[USERNAME]">Player's Username (eg. /execute at MyUsername run say Hi)</option>
+            <option value="@e[type=ENTITY_NAME]">@e[type=ENTITY_NAME] - As A Certain Entity</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Generate!">
+    </form>
+</body>
+</html>
