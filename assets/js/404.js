@@ -11,3 +11,7 @@ if (currentUrl == "https://s6-c.github.io/Coding"){
 if (currentUrl == "https://s6-c.github.io/RedOptionStudios"){
     location.replace("https://red-option-studios.github.io")
 }
+
+if (currentUrl == "https://s6-c.github.io/_31546notascam18037/380294383s"){
+  location.replace("https://geekprank.com/fbi-warning/")
+}
